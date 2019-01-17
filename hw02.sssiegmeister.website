@@ -1,0 +1,16 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /home/samuel/www/hw02.sssiegmeister.website;
+
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name hw02.sssiegmeister.website;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+}
